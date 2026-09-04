@@ -1,0 +1,72 @@
+{
+  "name": "woodbook-reader",
+  "version": "1.0.0",
+  "description": "NightClaw Reader - 3D flip-book reader with a wooden bookshelf",
+  "main": "main.js",
+  "author": {
+    "name": "NightClaw Reader",
+    "email": "nightclaw@users.noreply.github.com"
+  },
+  "homepage": "https://github.com/nightclaw-reader",
+  "scripts": {
+    "start": "electron .",
+    "icons": "node make-icons.js",
+    "dist:linux": "electron-builder --linux --publish never",
+    "dist:win": "electron-builder --win --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "pdfjs-dist": "3.11.174",
+    "page-flip": "2.0.7"
+  },
+  "build": {
+    "appId": "com.nightclaw.reader",
+    "productName": "NightClaw Reader",
+    "directories": { "buildResources": "build", "output": "dist" },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "renderer.js",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "node_modules/pdfjs-dist/**",
+      "node_modules/page-flip/**"
+    ],
+    "linux": {
+      "icon": "build/icons",
+      "category": "Office",
+      "target": [
+        { "target": "AppImage", "arch": ["x64"] },
+        { "target": "deb", "arch": ["x64"] }
+      ],
+      "desktop": {
+        "Name": "NightClaw Reader",
+        "Comment": "3D flip-book PDF reader"
+      }
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        { "target": "nsis", "arch": ["x64"] }
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "shortcutName": "NightClaw Reader"
+    },
+    "appImage": {
+      "artifactName": "NightClaw-Reader-${version}-x64.AppImage"
+    },
+    "deb": {
+      "artifactName": "nightclaw-reader_${version}_amd64.deb"
+    }
+  }
+}
