@@ -32,6 +32,10 @@
 - Auto-hiding toolbars: move the mouse to the screen edge to reveal them
 - Preloading and caching — smooth even on 900+ page books
 
+## Screenshots
+![App Dashboard Layout](screenshots/shelf.png
+![App Dashboard Layout](screenshots/reader.png)
+
 ## Download
 
 Grab the latest build from [**Releases**](../../releases):
