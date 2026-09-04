@@ -92,4 +92,4 @@ Click the drawer in the bookcase to set a password (stored only as a SHA-256 has
 
 ## License
 
-[MIT](README.md) 
+[MIT](LICENSE) 
