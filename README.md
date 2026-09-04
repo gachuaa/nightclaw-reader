@@ -1,70 +1,95 @@
-#NightClaw Reader
+<p align="center">
+  <img src="docs/icon.png" width="120" alt="NightClaw Reader logo">
+</p>
 
+<h1 align="center">NightClaw Reader</h1>
 
-A cozy, cross-platform PDF reader that puts your library on a wooden bookshelf  and your pages in a 3D flip-book — with a reading lamp, a secret drawer, and no clutter.
-✨ Features
+<p align="center">
+  A cozy, cross-platform PDF reader that puts your library on a wooden bookshelf
+  and your pages in a 3D flip-book — with a reading lamp, a secret drawer, and no clutter.
+</p>
 
-Bookshelf
+---
 
-    🪵 Wooden bookcase that scales with your window — books shrink and grow with it
-    📚 Multiple rows — add books to any shelf, drag & drop books between rows
-    🖼 Cover thumbnails generated automatically, with reading-progress bars
-    🗄 Secret drawer — hide any book behind a password. Locked books stay locked. (SHA-256, changeable)
+## Features
 
-Reading
+**Bookshelf**
 
-    📖 True 3D page-flip — grab a corner, drag, watch it curl
-    💡 Reading lamp — three soft light cones with a warm reflection on the paper, 6 color temperatures (Amber → Moonlight), and the room dims around you like real night reading
-    🌗 Paper / Sepia / Night themes
-    🔖 Bookmarks with notes
-    ☰ Table of contents, jump-to-page, page slider, zoom slider (50–300%) + Ctrl+wheel
-    📄 Subtle page-turn sound
-    ↩️ Remembers your exact page in every book — reopen and continue
-    🪄 Auto-hiding toolbars: move the mouse to the screen edge to reveal them
-    ⚡ Preloading and caching — smooth even on 900+ page books
+- Wooden bookcase that scales with your window — books shrink and grow with it
+- Multiple rows — add books to any shelf, **drag & drop** books between rows
+- Cover thumbnails generated automatically, with reading-progress bars
+- **Secret drawer** — hide any book behind a password. Locked books stay locked. (SHA-256, changeable)
 
-📥 Download
+**Reading**
 
-Grab the latest build from Releases:
-Platform	File	Install
-Linux (portable)	NightClaw-Reader-*-x64.AppImage	chmod +x it, then run (needs fuse-libs / libfuse2)
-Linux (Debian/Ubuntu/Mint)	nightclaw-reader_*_amd64.deb	sudo apt install ./nightclaw-reader_*_amd64.deb
-Windows	NightClaw Reader Setup *.exe	Double-click. (SmartScreen may warn — unsigned build, "More info → Run anyway")
+- True **3D page-flip** — grab a corner, drag, watch it curl
+- **Reading lamp** — three soft light cones with a warm reflection on the paper, 6 color temperatures (Amber to Moonlight), and the room dims around you like real night reading
+- Paper / Sepia / Night themes
+- Bookmarks **with notes**
+- Table of contents, jump-to-page, page slider, zoom slider (50–300%) + Ctrl+wheel
+- Subtle page-turn sound
+- Remembers your exact page in every book — reopen and continue
+- Auto-hiding toolbars: move the mouse to the screen edge to reveal them
+- Preloading and caching — smooth even on 900+ page books
 
-Verify integrity with the attached SHA256SUMS.txt.
-🔨 Build from source
+## Download
 
-Requirements: Node.js 18+ and npm.
+Grab the latest build from [**Releases**](../../releases):
 
+| Platform | File | Install |
+|---|---|---|
+| Linux (portable) | `NightClaw-Reader-*-x64.AppImage` | `chmod +x` it, then run (needs `fuse-libs` / `libfuse2`) |
+| Linux (Debian/Ubuntu/Mint) | `nightclaw-reader_*_amd64.deb` | `sudo apt install ./nightclaw-reader_*_amd64.deb` |
+| Windows | `NightClaw Reader Setup *.exe` | Double-click. (SmartScreen may warn — unsigned build, "More info → Run anyway") |
+
+Verify integrity with the attached `SHA256SUMS.txt`.
+
+## Build from source
+
+Requirements: [Node.js](https://nodejs.org) 18+ and npm.
+
+```bash
 git clone https://github.com/gachuaa/nightclaw-reader.git
 cd nightclaw-reader
 npm install
 npm start          # run in dev mode
+```
 
 Package installers:
 
-npm run icons      # generate app icons from the claw logonpm run dist:linux # → AppImage + .deb in dist/npm run dist:win   # → Windows .exe installer in dist/
+```bash
+npm run icons      # generate app icons from the claw logo
+npm run dist:linux # -> AppImage + .deb in dist/
+npm run dist:win   # -> Windows .exe installer in dist/
+```
 
-⌨️ Keyboard shortcuts
-Key	Action
-← / →	Flip page
-B	Bookmark current spread
-G	Jump to page
-+ / −	Zoom
-F	Fullscreen
-H	Toggle toolbars
-Esc	Close panel / back to shelf
+## Keyboard shortcuts
+
+|Key|Action|
+|---|---|
+|`←` / `→`|Flip page|
+|`B`|Bookmark current spread|
+|`G`|Jump to page|
+|`+` / `−`|Zoom|
+|`F`|Fullscreen|
+|`H`|Toggle toolbars|
+|`Esc`|Close panel / back to shelf|
 
 Ctrl + mouse wheel zooms anywhere over the book. Double-click the background for fullscreen.
-🗄 The secret drawer
 
-Click the drawer in the bookcase to set a password (stored only as a SHA-256 hash).Hover any book and press ⤵ to hide it — it vanishes from the shelf until you unlock.Change the password anytime from inside the open drawer.
+## The secret drawer
 
-    Note: the drawer is a privacy lock, not encryption. Forgetting the password meansediting your library file to reset it — there is deliberately no in-app reset.
+Click the drawer in the bookcase to set a password (stored only as a SHA-256 hash). Hover any book and press **⤵** to hide it — it vanishes from the shelf until you unlock. Change the password anytime from inside the open drawer.
 
-🛠 Tech
+> **Note:** the drawer is a privacy lock, not encryption. Forgetting the password means editing your library file to reset it — there is deliberately no in-app reset.
 
-    Electron — cross-platform desktop shell
-    pdf.js — PDF rendering
-    page-flip — 3D page-turn engine
-    Zero runtime dependencies beyond the above; icons generated by a dependency-free Node script
+## Tech
+
+- [Electron](https://www.electronjs.org) — cross-platform desktop shell
+- [pdf.js](https://mozilla.github.io/pdf.js/) — PDF rendering
+- [page-flip](https://github.com/Nodlik/StPageFlip) — 3D page-turn engine
+- Zero runtime dependencies beyond the above; icons generated by a dependency-free Node script
+
+## License
+
+[MIT](README.md) 
