@@ -1,7 +1,7 @@
 #NightClaw Reader
 
 
-  A cozy, cross-platform PDF reader that puts your library on a wooden bookshelf  and your pages in a 3D flip-book — with a reading lamp, a secret drawer, and no clutter.
+A cozy, cross-platform PDF reader that puts your library on a wooden bookshelf  and your pages in a 3D flip-book — with a reading lamp, a secret drawer, and no clutter.
 ✨ Features
 
 Bookshelf
@@ -36,7 +36,10 @@ Verify integrity with the attached SHA256SUMS.txt.
 
 Requirements: Node.js 18+ and npm.
 
-git clone https://github.com/YOUR_USERNAME/nightclaw-reader.gitcd nightclaw-readernpm installnpm start          # run in dev mode
+git clone https://github.com/gachuaa/nightclaw-reader.git
+cd nightclaw-reader
+npm install
+npm start          # run in dev mode
 
 Package installers:
 
