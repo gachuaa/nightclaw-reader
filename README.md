@@ -33,7 +33,11 @@
 - Preloading and caching — smooth even on 900+ page books
 
 ## Screenshots
+
+#### Shelf View
 ![App Dashboard Layout](screenshots/shelf.png)
+
+#### Reader View
 ![App Dashboard Layout](screenshots/reader.png)
 
 ## Download
